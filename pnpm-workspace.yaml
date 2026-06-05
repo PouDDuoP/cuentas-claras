@@ -1,0 +1,18 @@
+# ─────────────────────────────────────────────────────────────────────
+# pnpm-workspace.yaml — Configuración de monorepo para pnpm
+# ─────────────────────────────────────────────────────────────────────
+# PROPÓSITO:   Define qué carpetas son workspaces dentro del monorepo
+# EQUIVALE A:  "workspaces" en package.json (pero pnpm usa este archivo)
+#
+# apps/*      → Aplicaciones (api, web, mobile)
+# packages/*  → Librerías compartidas (common, database, ui-shared)
+# ─────────────────────────────────────────────────────────────────────
+
+packages:
+  - 'apps/*'
+  - 'packages/*'
+allowBuilds:
+  '@nestjs/core': true
+  '@prisma/engines': true
+  prisma: true
+  unrs-resolver: set this to true or false
