@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "api:dev": "npm run start:dev -w api",
-    "web:dev": "npm run start -w web-pc"
+    "api:dev": "pnpm --filter api start:dev",
+    "api:build": "pnpm --filter api build",
+    "api:test": "pnpm --filter api test",
+    "api:test:tdd": "pnpm --filter api test:tdd",
+    "web:dev": "pnpm --filter web-pc start"
   },
   "keywords": [],
   "author": "",
